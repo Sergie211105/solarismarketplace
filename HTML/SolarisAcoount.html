@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account - Solaris E-commerce</title>
+    <link rel="stylesheet" href="../CSS/SolarisAccount.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="top-nav-bar">
+            <div class="top-nav-links">
+                <a href="../HTML/SolarisHome.html">HOME</a>
+                <a href="../HTML/SolarisCatalog.html">CATALOG</a>
+            </div>
+        </div>
+        <div class="header-content">
+            <a href="../HTML/SolarisHome.html" class="logo">SOLARIS</a>
+            <div class="search-section">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for products...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="search-suggestions">
+                    <span>Vitacimin</span>
+                    <span>One Piece</span>
+                    <span>Nike</span>
+                </div>
+            </div>
+            <div class="header-icons">
+                <a href="../HTML/SolarisNewCart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="../HTML/SolarisAcoount.html" class="user-profile-circle active">
+                    <img src="../Images/profil.jpg" alt="User Avatar"> 
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="account-page" class="page">
+        <div class="account-container">
+            <aside class="profile-sidebar">
+                <div class="user-info-section">
+                    <img src="../Images/profil.jpg" alt="Profile Picture" class="profile-large-avatar">
+                    <p class="user-name-display">Halo, <strong>Nama User</strong></p> 
+                </div>
+
+                <nav class="account-nav-links">
+                    <a href="#profile-settings" class="account-nav-item active"><i class="fas fa-cog"></i> Profile Settings</a>
+                    <a href="#recent-purchases" class="account-nav-item"><i class="fas fa-box-open"></i> Recent Purchases</a>
+                    <a href="#wishlist" class="account-nav-item"><i class="fas fa-heart"></i> Wishlist</a>
+                    <a href="#" class="account-nav-item logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                </nav>
+            </aside>
+
+            <section class="account-content-area">
+                
+                <div id="profile-settings" class="content-section active">
+                    <h2><i class="fas fa-user-circle"></i> Profile Settings</h2>
+                    <form id="profile-form" class="profile-details-form">
+                        <div class="form-group">
+                            <label for="name">NAME</label>
+                            <input type="text" id="name" name="name"  placeholder="Your Name" required> 
+                        </div>
+                        <div class="form-group">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" placeholder="@gmail required" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">PHONE NUMBER</label>
+                            <input type="tel" id="phone" placeholder="Your Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">CITY</label>
+                            <input type="text" id="city" placeholder="Example: Bandung" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="province">PROVINCE</label>
+                            <input type="text" id="province" placeholder="Example: Jawa Barat" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bio">BIO (Optional)</label>
+                            <textarea id="bio" placeholder="Type your BIO here..."></textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="save-change-btn"><i class="fas fa-save"></i> SAVE CHANGES</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div id="recent-purchases" class="content-section hidden">
+                    <h2><i class="fas fa-history"></i> Recent Purchases</h2>
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <div class="product-image-container">
+                                <img src="../Images/MC.jpg" alt="Memory Corsair Vengeance">
+                                <button class="quick-add-btn">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <p class="product-name">Memory Corsair Vengeance</p>
+                            <span class="product-price">Rp 893.000</span>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image-container">
+                                <img src="../Images/HP.jpg" alt="Samsung Galaxy Z Fold 4 Second Bekas">
+                                <button class="quick-add-btn">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <p class="product-name">Samsung Galaxy Z Fold 4 Second</p>
+                            <span class="product-price">Rp 7.350.000</span>
+                        </div>
+                            <div class="product-card">
+                            <div class="product-image-container">
+                                <img src="../Images/Zoro.jfif" alt="One Piece Roronoa Zero">
+                                <button class="quick-add-btn">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <p class="product-name">One Piece Roronoa Zero</p>
+                            <span class="product-price">Rp 190.000</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="wishlist" class="content-section hidden">
+                    <h2><i class="fas fa-heart"></i> Wishlist</h2>
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <div class="product-image-container">
+                                <img src="../Images/Zoro.jfif" alt="One Piece Roronoa Zero">
+                                <button class="quick-add-btn">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <p class="product-name">One Piece Roronoa Zero</p>
+                            <span class="product-price">Rp 190.000</span>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image-container">
+                                <img src="../Images/MC.jpg" alt="Memory Corsair Vengeance">
+                                <button class="quick-add-btn">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <p class="product-name">Memory Corsair Vengeance</p>
+                            <span class="product-price">Rp 893.000</span>
+                        </div>
+                        <div class="product-card">
+                            <div class="product-image-container">
+                                <img src="../Images/CB.jfif" alt="Chest bag Black BRAMBLE Waterproof Tas Dada Pria">
+                                <button class="quick-add-btn">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                            <p class="product-name">Chest bag Black BRAMBLE Waterproof</p>
+                            <span class="product-price">Rp 214.050</span>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-grid-container">
+                <div class="footer-column">
+                    <h3>SOLARIS</h3>
+                    <ul>
+                        <li><a href="../HTML/SolarisHome.html">HOME</a></li>
+                        <li><a href="../HTML/SolarisNewCart.html">CART</a></li>
+                        <li><a href="../HTML/SolarisCatalog.html">CATALOG</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>HELP CENTER</h3>
+                    <ul>
+                        <li><a href="#">AI ADMIN</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>SELL</h3>
+                    <ul>
+                        <li><a href="#">CONTACT</a></li>
+                        <li><a href="#">REGISTER PAGE</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>FOLLOW US</h3>
+                    <div class="social-icons-footer">
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="newsletter-signup">
+                        <h4>NEWSLETTER</h4>
+                        <p>Subscribe for updates and promotions</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address">
+                            <button type="submit">SUBSCRIBE</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>COPYRIGHT SOLARIS 2025</span>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../JS/SolarisAccount.js"></script>
+</body>
+</html>

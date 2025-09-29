@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Solaris E-commerce</title>
+    <link rel="stylesheet" href="../CSS/SolarisHome.css">
+    <link rel="stylesheet" href="../CSS/SolarisSlideshow.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="top-nav-bar">
+            <div class="top-nav-links">
+                <a href="./SolarisHome.html">HOME</a>
+                <a href="#">CATALOG</a>
+            </div>
+        </div>
+        <div class="header-content">
+            <a href="home.html" class="logo">SOLARIS</a>
+            <div class="search-section">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search">
+                    <button><img src="search_icon_black.png" alt="Search"></button>
+                </div>
+                <div class="search-suggestions">
+                    <span>Vitacimin</span>
+                    <span>One Piece</span>
+                    <span>Nike</span>
+                </div>
+            </div>
+            <div class="header-icons">
+                <a href="cart.html" class="cart-icon">🛒</a>
+                <a href="account.html" class="user-profile-circle">
+                    <img src="Foto/profil.jpg" alt="User Avatar">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="home-page" class="page">
+        <section class="promo-banner-slideshow">
+            <div class="slideshow-container" id="promoSlideshow">
+                <div class="mySlides fade">
+                    <img src="Foto/BANNER.jpg" alt="Promo Banner Cemilan Libur Panjang" class="banner-image">
+                    <div class="promo-overlay-content">
+                        <div class="promo-text-group">
+                            <span class="promo-large-text">CEMILAN LIBUR</span>
+                            <span class="promo-large-text">PANJANG</span>
+                        </div>
+                        <div class="promo-discount-circle">
+                            DISKON S/D
+                            <br>
+                            <span class="discount-percentage">50%</span>
+                        </div>
+                        <div class="promo-small-images">
+                            <img src="Foto/BAJU.jpg" alt="Promo Item 1">
+                            <img src="Foto/SENDOK.jfif" alt="Promo Item 2">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="https://via.placeholder.com/1200x200/FF5733/FFFFFF?text=Promo+2+-+Fashion+Terbaru" alt="Promo 2 Fashion Terbaru" class="banner-image">
+                    <div class="promo-overlay-content">
+                        <div class="promo-text-group">
+                            <span class="promo-large-text">KOLEKSI</span>
+                            <span class="promo-large-text">TERBARU</span>
+                        </div>
+                        <div class="promo-discount-circle">
+                            GRATIS
+                            <br>
+                            <span class="discount-percentage">ONGKIR</span>
+                        </div>
+                        <div class="promo-small-images">
+                            <img src="https://via.placeholder.com/80x80/FF5733/FFFFFF?text=ItemA" alt="Fashion Item A">
+                            <img src="https://via.placeholder.com/80x80/FF5733/FFFFFF?text=ItemB" alt="Fashion Item B">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="https://via.placeholder.com/1200x200/33C7FF/FFFFFF?text=Promo+3+-+Gadget+Mewah" alt="Promo 3 Gadget Mewah" class="banner-image">
+                    <div class="promo-overlay-content">
+                        <div class="promo-text-group">
+                            <span class="promo-large-text">GADGET</span>
+                            <span class="promo-large-text">PREMIUM</span>
+                        </div>
+                        <div class="promo-discount-circle">
+                            CASHBACK
+                            <br>
+                            <span class="discount-percentage">25%</span>
+                        </div>
+                        <div class="promo-small-images">
+                            <img src="https://via.placeholder.com/80x80/33C7FF/FFFFFF?text=GadgetX" alt="Gadget X">
+                            <img src="https://via.placeholder.com/80x80/33C7FF/FFFFFF?text=GadgetY" alt="Gadget Y">
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align:center; margin-top: 10px;">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="special-items">
+            <h2>Special Item <span class="just-for-you">Just For You</span></h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="Foto/GESPER.jfif" alt="EIGER BELT DIRECTION 1.0">
+                    </div>
+                    <p class="product-name">EIGER BELT DIRECTION 1.0</p>
+                    <span class="product-price">Rp 178.000</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="Foto/HP.jpg" alt="Samsung Galaxy Z Fold 4 Second Bekas">
+                    </div>
+                    <p class="product-name">Samsung Galaxy Z Fold 4 Second</p>
+                    <span class="product-price">Rp 7.350.000</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="Foto/MC.jpg" alt="Memory Corsair Vengeance">
+                    </div>
+                    <p class="product-name">Memory Corsair Vengeance</p>
+                    <span class="product-price">Rp 893.000</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="Foto/SETRIKA.jpg" alt="Setrika Philips Dry Iron HD 1172">
+                    </div>
+                    <p class="product-name">Setrika Philips Dry Iron HD 1172</p>
+                    <span class="product-price">Rp 200.000</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="Foto/CB.jfif" alt="Chest bag Black BRAMBLE Waterproof Tas Dada Pria">
+                    </div>
+                    <p class="product-name">Chest bag Black BRAMBLE</p>
+                    <span class="product-price">Rp 214.050</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="Foto/Zoro.jfif" alt="Action Figure One Piece Roronoa Zero">
+                    </div>
+                    <p class="product-name">One Piece Roronoa Zero</p>
+                    <span class="product-price">Rp 190.000</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="Foto/ROBUX.jfif" alt="Roblox Digital Gift Card">
+                    </div>
+                    <p class="product-name">Roblox Digital Gift Card</p>
+                    <span class="product-price">Rp 170.000</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="Foto/BILIARD.jpg" alt="Billiard Ball Full Set">
+                    </div>
+                    <p class="product-name">Billiard Ball Full Set</p>
+                    <span class="product-price">Rp 200.000</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-grid-container">
+            <div class="footer-column">
+                <h3>SOLARIS</h3>
+                <ul>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="cart.html">CART</a></li>
+                    <li><a href="#">CATALOG</a></li>
+                </ul>
+                <h3>HELP CENTER</h3>
+                <ul>
+                    <li><a href="#">AI ADMIN</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>SELL</h3>
+                <ul>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">REGISTER PAGE</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>BUY</h3>
+                <ul>
+                    <li><a href="#">CANDLE</a></li>
+                    <li><a href="#">SHIRTS</a></li>
+                    <li><a href="#">KITCHEN</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>FOLLOW US</h3>
+                <div class="social-icons-footer">
+                    <a href="#"><img src="whatsapp_icon.png" alt="WhatsApp"></a>
+                    <a href="#"><img src="instagram_icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="facebook_icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="twitter_icon.png" alt="Twitter"></a>
+                </div>
+                <div class="discount-promo-footer">
+                    <h4>ENJOY THESE DISCOUNT!!!!</h4>
+                    <ul>
+                        <li><span class="dot"></span> 20% DISCOUNT</li>
+                        <li><span class="dot"></span> BUY 1 GET 1</li>
+                        <li><span class="dot"></span> ONLY FOR TODAY!!</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-column">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>COPYRIGHT SOLARIS 2025</span>
+        </div>
+    </footer>
+
+    <script src="../Images/SolarisHome.js"></script>
+</body>
+</html>

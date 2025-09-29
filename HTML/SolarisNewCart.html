@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Solaris E-commerce</title>
+    <link rel="stylesheet" href="../CSS/SolarisHome.css">
+    <link rel="stylesheet" href="../CSS/SolarisNewCart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header class="main-header">
+    <div class="top-nav-bar">
+        <div class="top-nav-links">
+            <a href="../HTML/SolarisHome.html">HOME</a>
+            <a href="../HTML/SolarisCatalog.html">CATALOG</a>
+        </div>
+    </div>
+    <div class="header-content">
+        <a href="../HTML/SolarisHome.html" class="logo">SOLARIS</a>
+        <div class="search-section">
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="search-suggestions">
+                <span>Vitacimin</span>
+                <span>One Piece</span>
+                <span>Nike</span>
+            </div>
+        </div>
+        <div class="header-icons">
+            <a href="../HTML/SolarisAcoount.html" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+            <a href="../HTML/SolarisAcoount.html" class="user-profile-circle active">
+                    <img src="../Images/profil.jpg" alt="User Avatar"> 
+             </a>
+        </div>
+    </div>
+</header>
+
+<main id="cart-page" class="page">
+    <h1 class="page-title">VIEW <span class="your-cart-text">YOUR CART</span></h1>
+
+    <div class="cart-content">
+        <!-- Left Column - Cart Items & Empty State -->
+        <div class="cart-items-column">
+            <div class="cart-items-container" id="cartItemsContainer">
+                <!-- Cart items will be dynamically loaded here -->
+            </div>
+            
+            <!-- Empty Cart State (shown when no items) -->
+            <div class="empty-cart-state" id="emptyCartState">
+                <div class="empty-cart-icon">
+                    <i class="fas fa-shopping-basket"></i>
+                </div>
+                <h3>Your Cart is Empty</h3>
+                <p>Add some items to get started</p>
+                <a href="../HTML/SolarisCatalog.html" class="continue-shopping-btn">
+                    <i class="fas fa-store"></i> Shop Now
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Column - Cart Summary (Always visible) -->
+        <div class="cart-sidebar">
+            <!-- Cart Summary Section -->
+            <div class="cart-summary" id="cartSummary">
+                <div class="cart-summary-row">
+                    <span class="total-cost-label">Total Cost:</span>
+                    <span class="total-cost-amount" id="totalCostAmount">Rp 0</span>
+                </div>
+                <div class="cart-summary-controls">
+                    <select class="convert-cost-dropdown" id="convertCostDropdown">
+                        <option value="IDR">IDR</option>
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                    </select>
+                    <button class="checkout-btn" id="checkoutBtn">
+                        <i class="fas fa-credit-card"></i> Checkout
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Empty sidebar message (shown when cart is empty) -->
+            <div class="empty-sidebar-message" id="emptySidebarMessage">
+                <p>Add items to your cart to see the total cost</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="main-footer">
+    <div class="footer-content">
+        <div class="footer-grid-container">
+            <div class="footer-column">
+                <h3>SOLARIS</h3>
+                <ul>
+                    <li><a href="../HTML/SolarisHome.html">HOME</a></li>
+                    <li><a href="../HTML/SolarisNewCart.html">CART</a></li>
+                    <li><a href="../HTML/SolarisCatalog.html">CATALOG</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>HELP CENTER</h3>
+                <ul>
+                    <li><a href="#">AI ADMIN</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>SELL</h3>
+                <ul>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">REGISTER PAGE</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>FOLLOW US</h3>
+                <div class="social-icons-footer">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="newsletter-signup">
+                    <h4>NEWSLETTER</h4>
+                    <p>Subscribe for updates and promotions</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address">
+                        <button type="submit">SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>COPYRIGHT SOLARIS 2025</span>
+        </div>
+    </div>
+</footer>
+
+<script src="../JS/SolarisCart.js"></script>
+</body>
+</html>

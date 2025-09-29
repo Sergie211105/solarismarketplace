@@ -1,0 +1,475 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    min-height: 80vh; /* Ensure pages have some height */
+    padding-top: 150px; /* Adjust space for fixed header */
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000;
+}
+
+h2 {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Header Styling */
+.main-header {
+    background-color: #fff; /* White background for the main part of the header */
+    color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.top-nav-bar {
+    background-color: #e0e0e0; /* Light gray background for the top nav */
+    padding: 5px 20px;
+    display: flex;
+    justify-content: flex-end; /* Align to right */
+    border-bottom: 1px solid #ccc; /* Subtle border */
+}
+
+.top-nav-links {
+    max-width: 1200px; /* Match max-width of header-content */
+    width: 100%;
+    margin: 0 auto; /* Center the links */
+    text-align: right; /* Align links to the right within its container */
+}
+
+.top-nav-links a {
+    color: #555;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.top-nav-links a:hover {
+    color: #000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px; /* Add padding for main header content */
+}
+
+.logo {
+    font-size: 32px; /* Larger font size for SOLARIS */
+    font-weight: bold;
+    color: #000; /* Black color for SOLARIS logo */
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 30px; /* Space from search bar */
+}
+
+.search-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align search bar and suggestions to left */
+    max-width: 600px; /* Adjust max-width as needed */
+}
+
+.search-bar {
+    display: flex;
+    width: 100%;
+    border: 2px solid #000; /* Black border */
+    border-radius: 25px; /* More rounded corners */
+    overflow: hidden; /* Ensure content stays within border */
+    background-color: #fff;
+    height: 40px; /* Fixed height for search bar */
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 8px 20px;
+    border: none;
+    outline: none; /* Remove outline on focus */
+    font-size: 16px;
+    background-color: transparent; /* No background for input */
+}
+
+.search-bar button {
+    background-color: transparent; /* No background for button */
+    border: none;
+    padding: 0 15px; /* Adjust padding */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar button img {
+    height: 24px; /* Adjust search icon size */
+    width: 24px;
+}
+
+.search-suggestions {
+    margin-top: 5px;
+    margin-left: 20px; /* Align with search input */
+    font-size: 12px;
+    color: #888;
+}
+
+.search-suggestions span {
+    margin-right: 10px;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    margin-left: 30px; /* Space from search bar */
+}
+
+.header-icons .cart-icon {
+    color: #000; /* Black color for cart icon */
+    font-size: 28px; /* Larger cart icon */
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.user-profile-circle {
+    width: 50px; /* Size of the user circle */
+    height: 50px;
+    border-radius: 50%; /* Make it a circle */
+    overflow: hidden; /* Clip avatar image to circle */
+    display: block;
+    border: 2px solid #000; /* Optional: border around the circle */
+}
+
+.user-profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the circle */
+}
+
+/* Promo Banner Slideshow Styling */
+.promo-banner-slideshow {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Tinggi banner */
+    overflow: hidden; /* Penting untuk menyembunyikan slide yang tidak aktif */
+    border-radius: 8px;
+    margin-bottom: 30px;
+    background-color: #f0f0f0; /* Fallback background */
+}
+
+/* Kontainer untuk slide individu */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Setiap slide */
+.mySlides {
+    display: none; /* Sembunyikan semua slide secara default, akan diatur oleh JS */
+    position: absolute; /* Posisikan absolut di dalam container */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* Gambar banner di dalam slide */
+.mySlides .banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; /* Di belakang konten overlay */
+}
+
+/* Konten overlay pada slide (teks, diskon, gambar kecil) */
+.promo-overlay-content {
+    position: relative;
+    z-index: 1; /* Di atas gambar banner */
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Distribute items horizontally */
+    width: 100%;
+    height: 100%; /* Pastikan overlay menutupi seluruh tinggi slide */
+    padding: 0 20px; /* Tambah padding horizontal */
+    color: #000; /* Warna teks sesuai desain */
+}
+
+.promo-text-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-weight: bold;
+    line-height: 1.1; /* Sesuaikan jarak baris teks */
+    /* position: relative; /* Pastikan di konteks z-index overlay */
+    z-index: 2; /* Di atas gambar banner dan overlay */
+}
+
+.promo-large-text {
+    font-size: 36px; /* Ukuran font teks besar */
+}
+
+.promo-discount-circle {
+    background-color: #fff; /* Latar belakang putih untuk lingkaran diskon */
+    border: 3px solid red; /* Border merah */
+    border-radius: 50%; /* Bentuk lingkaran */
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px; /* Ukuran font untuk 'DISKON S/D' */
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    line-height: 1.2;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    flex-shrink: 0; /* Mencegah elemen menyusut */
+    margin: 0 20px; /* Jarak dari elemen lain */
+    /* position: relative; /* Pastikan di konteks z-index overlay */
+    z-index: 2; /* Di atas gambar banner dan overlay */
+}
+
+.discount-percentage {
+    font-size: 28px; /* Ukuran font untuk persentase diskon */
+    color: red;
+}
+
+.promo-small-images {
+    display: flex;
+    gap: 10px;
+    /* position: relative; /* Pastikan di konteks z-index overlay */
+    z-index: 2; /* Di atas gambar banner dan overlay */
+}
+
+.promo-small-images img {
+    width: 80px; /* Ukuran gambar promo kecil */
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ccc; /* Border opsional */
+}
+
+/* Efek transisi fade untuk slideshow */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* Dots/indikator slideshow */
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Special Items Section Styling */
+.special-items h2 {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.special-items .just-for-you {
+    font-size: 14px;
+    font-weight: normal;
+    color: #888;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.product-card .product-image-container {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #e9e9e9;
+}
+
+.product-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.product-card .product-name {
+    font-size: 14px;
+    margin: 5px 0;
+    height: 3em; /* Limit text height for consistent card size */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    
+    -webkit-box-orient: vertical;
+}
+
+.product-card .product-price {
+    font-weight: bold;
+    color: #000;
+}
+
+/* Footer Styling */
+.main-footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px; /* Increased padding for better spacing */
+    width: 100%;
+    margin-top: 50px; /* Space from main content */
+}
+
+.footer-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+    gap: 30px; /* Space between columns */
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left; /* Align text to left within columns */
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align column content to start */
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.8; /* Slightly less prominent */
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.social-icons-footer {
+    display: flex;
+    gap: 10px; /* Space between social icons */
+    margin-top: 10px;
+}
+
+.social-icons-footer img {
+    width: 28px; /* Larger social icons */
+    height: 28px;
+}
+
+.discount-promo-footer {
+    margin-top: 20px;
+}
+
+.discount-promo-footer h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.discount-promo-footer ul {
+    list-style: none; /* Remove default list style */
+    padding: 0;
+    margin: 0;
+}
+
+.discount-promo-footer ul li {
+    font-size: 12px;
+    color: #fff;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.discount-promo-footer ul li .dot {
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333; /* Separator line */
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+}

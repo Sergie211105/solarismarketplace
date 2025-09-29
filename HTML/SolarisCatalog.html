@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog - Solaris E-commerce</title>
+    <link rel="stylesheet" href="../CSS/SolarisCatalog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+   <header class="main-header">
+        <div class="top-nav-bar">
+            <div class="top-nav-links">
+                <a href="../HTML/SolarisHome.html">HOME</a>
+                <a href="../HTML/SolarisCatalog.html" class="active">CATALOG</a>
+            </div>
+        </div>
+        <div class="header-content">
+            <a href="../HTML/SolarisHome.html" class="logo">SOLARIS</a>
+            <div class="search-section">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for products...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="search-suggestions">
+                    <span>Vitacimin</span>
+                    <span>One Piece</span>
+                    <span>Nike</span>
+                </div>
+            </div>
+            <div class="header-icons">
+                <a href="../HTML/SolarisNewCart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="../HTML/SolarisAcoount.html" class="user-profile-circle active">
+                    <img src="../Images/profil.jpg" alt="User Avatar"> 
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main id="catalog-page" class="page">
+        <div class="catalog-container">
+            <button id="filterToggleButton" class="filter-toggle-btn">
+                <i class="fas fa-filter"></i>
+                <span>Filters</span>
+                <span class="arrow-icon"></span>
+            </button>
+
+            <aside class="filter-sidebar active" id="filterSidebar">
+                <div class="filter-section">
+                    <h3>Categories</h3>
+                    <div class="filter-group">
+                        <label><input type="checkbox" name="category" value="sport"> Sport</label>
+                        <label><input type="checkbox" name="category" value="technologies"> Technologies</label>
+                        <label><input type="checkbox" name="category" value="fashion"> Fashion</label>
+                        <label><input type="checkbox" name="category" value="health"> Health</label>
+                    </div>
+                </div>
+                <div class="filter-section">
+                    <h4>Country of Origin</h4>
+                    <div class="filter-group">
+                        <label><input type="radio" name="country" value="indonesia"> Indonesia</label>
+                        <label><input type="radio" name="country" value="us"> United States</label>
+                        <label><input type="radio" name="country" value="all" checked> All Countries</label>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="product-display-area" id="productDisplayArea">
+                <h2 id="filterTitle">All Products</h2>
+                <div class="product-grid" id="productGrid">
+                    
+                    <div class="product-card" data-category="health" data-country="indonesia">
+                        <div class="product-image-container">
+                            <img src="../Images/Vitacimin.jpg" alt="Vitacimin">
+                            <button class="quick-add-btn" data-product="Vitacimin">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="product-name">Vitacimin</p>
+                        <span class="product-price">Rp 10.000</span>
+                    </div>
+                    
+                    <div class="product-card" data-category="health" data-country="indonesia">
+                        <div class="product-image-container">
+                            <img src="../Images/Panadol.jpg" alt="Panadol">
+                            <button class="quick-add-btn" data-product="Panadol">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="product-name">Panadol</p>
+                        <span class="product-price">Rp 7.000</span>
+                    </div>
+                    
+                    <div class="product-card" data-category="health" data-country="indonesia">
+                        <div class="product-image-container">
+                            <img src="../Images/Panadol Extra.png" alt="Panadol Extra">
+                            <button class="quick-add-btn" data-product="Panadol Extra">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="product-name">Panadol Extra</p>
+                        <span class="product-price">Rp 9.500</span>
+                    </div>
+
+                    <div class="product-card" data-category="health" data-country="us">
+                        <div class="product-image-container">
+                            <img src="../Images/Blacmores.jpg" alt="Blackmores Multivitamins">
+                            <button class="quick-add-btn" data-product="Blackmores Multivitamins">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="product-name">Blackmores Multivitamins</p>
+                        <span class="product-price">Rp 250.000</span>
+                    </div>
+
+                    <div class="product-card" data-category="health" data-country="indonesia">
+                        <div class="product-image-container">
+                            <img src="../Images/Entrostop.jpg" alt="Entrostop">
+                            <button class="quick-add-btn" data-product="Entrostop">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="product-name">Entrostop</p>
+                        <span class="product-price">Rp 6.000</span>
+                    </div>
+                    
+                    <div class="product-card" data-category="sport" data-country="us">
+                        <div class="product-image-container">
+                            <img src="../Images/Jordan Banned High.jpg" alt="Jordan Banned High">
+                            <button class="quick-add-btn" data-product="Jordan Banned High">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="product-name">Jordan Banned High</p>
+                        <span class="product-price">Rp 2.800.000</span>
+                    </div>
+
+                    <div class="product-card" data-category="sport" data-country="us">
+                        <div class="product-image-container">
+                            <img src="../Images/Basketball.jpg" alt="Official Basketball">
+                            <button class="quick-add-btn" data-product="Official Basketball">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="product-name">Official Basketball</p>
+                        <span class="product-price">Rp 350.000</span>
+                    </div>
+                    
+                    <div class="product-card" data-category="sport" data-country="indonesia">
+                        <div class="product-image-container">
+                            <img src="../Images/gym.jpeg" alt="Gym Dumbbell Set">
+                            <button class="quick-add-btn" data-product="Gym Dumbbell Set">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="product-name">Gym Dumbbell Set</p>
+                        <span class="product-price">Rp 1.200.000</span>
+                    </div>
+
+                    <div class="product-card" data-category="sport" data-country="us">
+                        <div class="product-image-container">
+                            <img src="../Images/BILIARD.jpg" alt="Billiard Stick">
+                            <button class="quick-add-btn" data-product="Billiard Stick">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="product-name">Billiard Stick</p>
+                        <span class="product-price">Rp 500.000</span>
+                    </div>
+                    
+                    <div class="product-card" data-category="technologies" data-country="us">
+                        <div class="product-image-container">
+                            <img src="../Images/Iphone.jpg" alt="iPhone 15 Pro Max">
+                            <button class="quick-add-btn" data-product="iPhone 15 Pro Max">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="product-name">iPhone 15 Pro Max</p>
+                        <span class="product-price">Rp 25.000.000</span>
+                    </div>
+
+                    <div class="product-card" data-category="technologies" data-country="indonesia">
+                        <div class="product-image-container">
+                            <img src="../Images/HP.jpg" alt="Laptop Gaming HP">
+                            <button class="quick-add-btn" data-product="Laptop Gaming HP">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="product-name">Laptop Gaming HP</p>
+                        <span class="product-price">Rp 15.000.000</span>
+                    </div>
+
+                    <div class="product-card" data-category="technologies" data-country="indonesia">
+                        <div class="product-image-container">
+                            <img src="../Images/LAPTOP.jpg" alt="Laptop ASUS">
+                            <button class="quick-add-btn" data-product="Laptop ASUS">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="product-name">Laptop ASUS</p>
+                        <span class="product-price">Rp 8.000.000</span>
+                    </div>
+                    
+                    <div class="product-card" data-category="fashion" data-country="indonesia">
+                        <div class="product-image-container">
+                            <img src="../Images/BAJU.jpg" alt="Casual T-Shirt">
+                            <button class="quick-add-btn" data-product="Casual T-Shirt">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="product-name">Casual T-Shirt</p>
+                        <span class="product-price">Rp 120.000</span>
+                    </div>
+
+                    <div class="product-card" data-category="fashion" data-country="indonesia">
+                        <div class="product-image-container">
+                            <img src="../Images/GESPER.jfif" alt="Leather Belt">
+                            <button class="quick-add-btn" data-product="Leather Belt">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="product-name">Leather Belt</p>
+                        <span class="product-price">Rp 95.000</span>
+                    </div>
+                    
+                    <div class="product-card" data-category="fashion" data-country="indonesia">
+                        <div class="product-image-container">
+                            <img src="../Images/ADLV.jpg" alt="ADLV Hoodie">
+                            <button class="quick-add-btn" data-product="ADLV Hoodie">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="product-name">ADLV Hoodie</p>
+                        <span class="product-price">Rp 890.000</span>
+                    </div>
+
+                    <div class="product-card" data-category="food" data-country="indonesia">
+                        <div class="product-image-container">
+                            <img src="../Images/CIKI.jpg" alt="Snack Ciki">
+                            <button class="quick-add-btn" data-product="Snack Ciki">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <p class="product-name">Snack Ciki</p>
+                        <span class="product-price">Rp 5.000</span>
+                    </div>
+                    
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <!-- Same footer as homepage -->
+        <div class="footer-content">
+            <div class="footer-grid-container">
+                <div class="footer-column">
+                    <h3>SOLARIS</h3>
+                    <ul>
+                        <li><a href="../HTML/SolarisHome.html">HOME</a></li>
+                        <li><a href="../HTML/SolarisNewCart.html">CART</a></li>
+                        <li><a href="../HTML/SolarisCatalog.html">CATALOG</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>HELP CENTER</h3>
+                    <ul>
+                        <li><a href="#">AI ADMIN</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>SELL</h3>
+                    <ul>
+                        <li><a href="#">CONTACT</a></li>
+                        <li><a href="#">REGISTER PAGE</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>FOLLOW US</h3>
+                    <div class="social-icons-footer">
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <div class="newsletter-signup">
+                        <h4>NEWSLETTER</h4>
+                        <p>Subscribe for updates and promotions</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email address">
+                            <button type="submit">SUBSCRIBE</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>COPYRIGHT SOLARIS 2025</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../JS/SolarisCatalog.js"></script>
+</body>
+</html>
